@@ -63,6 +63,7 @@ h1 {
   padding: 3rem;
   color: white;
   margin: auto;
+  margin-left: 2rem;
   height: 100%;
   width: 50%;
   border-radius: 25px;
@@ -90,6 +91,11 @@ h1 {
   background-color: hsl(172, 67%, 45%);
 }
 .tip-button-custom {
+  padding-right: 1rem;
+  border: none;
+  text-align: right;
+  font-size: 26px;
+  font-family: "Space Mono", monospace;
   color: hsl(183, 100%, 15%);
   background-color: hsl(189, 41%, 97%);
 }
@@ -103,6 +109,7 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 .textbox {
+  padding-right: 1rem;
   background-color: hsl(189, 41%, 97%);
   border: none;
   width: 100%;
@@ -119,7 +126,7 @@ input::-webkit-inner-spin-button {
 .reset-button {
   color: hsl(183, 100%, 15%);
   font-size: 24px;
-  margin: 0.3rem 0.7rem 0.3rem 0;
+  margin: 10rem 0.7rem 0.3rem 0;
   width: 100%;
   height: 45px;
   background-color: hsl(186, 14%, 43%);
@@ -139,8 +146,24 @@ input::-webkit-inner-spin-button {
 
 .big-num {
   font-size: 3rem;
+  color: hsl(172, 67%, 45%);
 }
 .tip-button-highlight {
   background-color: hsl(186, 14%, 43%);
   color: hsl(183, 100%, 15%);
+}
+
+@media only screen and (max-width: 800px) {
+  .leftside {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightside {
+    width: 100%;
+  }
+  .card {
+    max-width: 480px;
+    height: 100%;
+  }
 }

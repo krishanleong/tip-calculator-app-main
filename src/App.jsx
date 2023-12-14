@@ -6,11 +6,13 @@ function App() {
   const [tipPercent, setTipPercent] = useState(0.15);
   const [billAmount, setBillAmount] = useState(0);
   const [numPeople, setNumPeople] = useState(1);
+  const [customTip, setCustomTip] = useState("Custom");
 
   function handleReset() {
     setTipPercent(0.15);
     setBillAmount(0);
     setNumPeople(1);
+    setCustomTip("Custom");
   }
 
   return (
@@ -86,7 +88,12 @@ function App() {
                 >
                   50%
                 </button>
-                <button className="tip-button-custom tip-button">Custom</button>
+                <input
+                  className="tip-button-custom tip-button"
+                  type="text"
+                  value={customTip}
+                  onChange={(e) => setCustomTip(e.target.value)}
+                ></input>
               </div>
             </div>
             <div className="numpeople">
